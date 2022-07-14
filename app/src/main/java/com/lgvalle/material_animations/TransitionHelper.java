@@ -17,9 +17,9 @@
 package com.lgvalle.material_animations;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.util.Pair;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.util.Pair;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -35,13 +35,13 @@ class TransitionHelper {
      * Create the transition participants required during a activity transition while
      * avoiding glitches with the system UI.
      *
-     * @param activity The activity used as start for the transition.
+     * @param activity         The activity used as start for the transition.
      * @param includeStatusBar If false, the status bar will not be added as the transition
-     *        participant.
+     *                         participant.
      * @return All transition participants.
      */
     public static Pair<View, String>[] createSafeTransitionParticipants(@NonNull Activity activity,
-                                                          boolean includeStatusBar, @Nullable Pair... otherParticipants) {
+                                                                        boolean includeStatusBar, @Nullable Pair... otherParticipants) {
         // Avoid system UI glitches as described here:
         // https://plus.google.com/+AlexLockwood/posts/RPtwZ5nNebb
         View decor = activity.getWindow().getDecorView();
